@@ -1,0 +1,310 @@
+body {
+  margin: 0;
+}
+
+.searchArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 500px;
+  width: 100vw;
+  background-color: #e1ecff;
+}
+
+a, a:hover, a:focus, a:active {
+  text-decoration: none;
+  color: inherit;
+}
+
+.searchArea img {
+  height: 350px;
+  width: 90%;
+  border-radius: 20px;
+  margin-top: 40px;
+  object-fit: cover;
+  position: relative;
+}
+
+.searchEngine {
+  position: relative;
+  top: -50px;
+  width: 90%;
+  display: flex;
+  justify-content: center;
+}
+
+.mainArea {
+  height: 2500px;
+  width: 95%;
+  display: flex;
+  margin: 0;
+}
+
+.filtersArea {
+  width: 30%;
+  height: 100%;
+}
+
+.adsContentArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 70%;
+  height: 70%;
+  margin: 0;
+  padding: 0;
+}
+
+.adsArea {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 30px;
+  align-content: flex-start;
+  margin-bottom: 0;
+}
+
+.search_container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.input_address,
+.input_city {
+  height: 78px;
+  border-radius: 10px 0px 0px 10px;
+  border: 2px solid white;
+  outline: none;
+  padding-left: 20px;
+  font-family: "Raleway";
+  font-size: 15px;
+  width: 200px;
+}
+
+.input_address {
+  width: 350px;
+  border-radius: 0px;
+  border-left: 0.5px solid #000000;
+}
+
+input[type="number"] {
+  height: 80px;
+  border: 2px solid white;
+  outline: none;
+  padding-left: 20px;
+  font-family: "Raleway";
+  font-size: 15px;
+  width: 150px;
+  border-left: 0.5px solid #000000;
+  font-size: 13px;
+}
+
+.budget {
+  height: 80px;
+  border: 2px solid white;
+  outline: none;
+  padding-left: 20px;
+  font-family: "Raleway";
+  font-size: 15px;
+  width: 250px;
+  border-left: 0.5px solid #000000;
+  background-color: white;
+}
+
+.input_date {
+  height: 80px;
+  border: 2px solid white;
+  outline: none;
+  padding-left: 20px;
+  font-family: "Raleway";
+  font-size: 15px;
+  width: 150px;
+  border-left: 0.5px solid #000000;
+}
+
+.search_btn {
+  height: 84px;
+  width: 150px;
+  outline: none;
+  background-color: #689bff;
+  border: 0px solid white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0px 10px 10px 0px;
+  gap: 1px;
+}
+
+.search_btn:hover {
+  background-color: #4584ff;
+  cursor: pointer;
+}
+
+.search_btn img {
+  height: 20px;
+  width: 20px;
+  margin: 0;
+  object-fit: contain;
+  padding-top: 3px;
+  transform: scaleX(-1);
+}
+
+.search_btn p {
+  font-family: "Raleway";
+  font-size: 12px;
+  color: white;
+  font-weight: bold;
+}
+
+input[type="date"] {
+  height: 80px;
+  border: 2px solid white;
+  outline: none;
+  padding-left: 20px;
+  font-family: "Raleway";
+  font-size: 15px;
+  width: 150px;
+  border-left: 0.5px solid #000000;
+  font-size: 13px;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: #2c3e50;
+  padding-right: 15px;
+  opacity: 30%;
+}
+
+input[type="date"]:before {
+  content: attr(placeholder) !important;
+  color: #aaa;
+  margin-right: 1em;
+  font-size: 12px;
+  margin-bottom: 0.5em;
+}
+input[type="date"]:focus:before,
+input[type="date"]:valid:before {
+  content: "";
+}
+
+.ranpe-price input {
+  -webkit-appearance: none;
+}
+
+.ranpe-price input::-webkit-outer-spin-button,
+.ranpe-price input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.range-slider {
+  height: 5px;
+  position: relative;
+  background-color: #e1e9f6;
+  border-radius: 2px;
+}
+.range-selected {
+  height: 100%;
+  left: 30%;
+  right: 30%;
+  background-color: #689bff;
+  position: absolute;
+  border-radius: 5px;
+}
+
+.range-input {
+  position: relative;
+}
+.range-input input {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  top: -7px;
+  background: none;
+  pointer-events: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.mainArea .autre_offre {
+  box-sizing: border-box;
+  padding-right: 20px;
+  overflow: hidden;
+}
+
+.range-input input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  pointer-events: auto;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  cursor: pointer;
+  border: 2px solid #f2f2f2;
+}
+
+.range-input input::-moz-range-thumb {
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  border: 3px solid #1b53c0;
+  background-color: #fff;
+  pointer-events: auto;
+  -moz-appearance: none;
+}
+
+.range-price {
+  margin: 30px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.range-price label {
+  margin-right: 5px;
+}
+.range-price input {
+  width: 40px;
+  padding: 5px;
+}
+.range-price input:first-of-type {
+  margin-right: 15px;
+}
+
+.pagination {
+  display: flex;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  display: flex;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+.page-number {
+  display: inline-block;
+  padding: 8px 15px;
+  margin: 0 5px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.page-number:hover {
+  background-color: #007bff;
+  color: white;
+}
+
+.page-number.active {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+.page-number:active {
+  transform: scale(0.95);
+}

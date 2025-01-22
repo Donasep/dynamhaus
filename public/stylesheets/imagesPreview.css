@@ -1,0 +1,134 @@
+.create .imgSection {
+	background-color: #e1ecff;
+	display: flex;
+	flex-direction: column;
+	justify-content: center; 
+	align-items: center; 
+	height: 700px;
+	width: 100%;
+	position: relative;
+}
+
+.slider-container {
+	position: relative;
+	width: 70%;
+	height: 80%;
+	overflow: hidden;
+	border-radius: 10px;
+	box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+	background: rgb(0,151,255);
+	background: linear-gradient(180deg, rgba(0,151,255,1) 0%, rgba(156,211,255,0.8729866946778712) 45%, rgba(250,245,245,1) 88%);
+}
+
+.slider {
+	display: flex; 
+	transition: transform 0.4s ease-in-out;
+}
+
+.slide {
+	min-width: 100%;
+	height: 450px;
+	transition: transform 0.5s ease-in-out;
+}
+
+.slide img {
+	width: 100%; 
+	height: 700px; 
+	object-fit: cover;
+	border-radius: 10px;
+	background-color: white;
+	cursor: pointer;
+  transition: 0.3s;
+}
+
+.prev, .next {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%); 
+	background-color: rgba(0, 0, 0, 0.5);
+	color: white;
+	border: none;
+	width: 40px; 
+	height: 40px; 
+	cursor: pointer; 
+	z-index: 10;
+	border-radius: 50%;
+	transition: background-color 0.3s ease;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0;
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+.prev {
+	left: 10px;
+}
+
+.next {
+	right: 10px; 
+}
+
+.prev:hover, .next:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dots-container {
+	margin-top: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.dot {
+	height: 15px;
+	width: 15px;
+	margin: 0 5px;
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 50%;
+	display: inline-block;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.dot.active {
+	background-color: rgba(255, 255, 255, 1);
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.9);
+	justify-content: center;
+	align-items: center;
+}
+
+.modal-content {
+  max-width: 60%;
+  max-height: 60%;
+  object-fit: contain;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}

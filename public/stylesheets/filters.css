@@ -1,0 +1,247 @@
+.filters_container {
+  widht: 100%;
+}
+.filter_title {
+  height: 50px;
+  width: 319px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+  margin-top: 50px;
+  box-shadow: 0px 10px 15px -5px rgba(0, 0, 0, 0.1),
+    0px 5px 10px -3px rgba(0, 0, 0, 0.05), 0px 5px 15px 3px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+}
+
+.filter_title h1 {
+  font-family: "Raleway";
+  font-size: 15px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.filter_title button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+  display: flex;
+  padding-right: 10px;
+}
+
+.filter_title img {
+  height: 18px;
+  widht: 18px;
+}
+
+.filter_content {
+  height: 230px;
+  width: 319px;
+  box-shadow: 0px 10px 15px -5px rgba(0, 0, 0, 0.1),
+    0px 5px 10px -3px rgba(0, 0, 0, 0.05), 0px 5px 15px 3px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  margin-top: 40px;
+  padding-top: 20px;
+  padding-left: 20px;
+}
+
+.filter_type_proposition .filter_content {
+  height: 160px;
+}
+
+.filter_autres .filter_content {
+  height: 150px;
+}
+
+.filter_surface_pièce .filter_content {
+  padding-top: 50px;
+  height: 160px;
+}
+
+.filter_durée .filter_content {
+  height: 80px;
+}
+
+.filter_durée .filter_content .whynotworking {
+  display: flex;
+  justify-content: flex-end;
+  width: 91%;
+}
+
+.choice {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: "Raleway";
+  font-size: 12px;
+  padding-bottom: 20px;
+  display: flex;
+  padding-top: 5px;
+  padding-bottom: 25px;
+}
+
+.choice input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 4px;
+}
+
+.choice:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.choice input:checked ~ .checkmark {
+  background-color: #689bff;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.choice input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.choice .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.whynotworking {
+  display: flex;
+  flex-direction: row;
+  color: #848484;
+  margin-top: -30px;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.filter_durée {
+}
+
+.slider {
+  padding-bottom: 30px;
+}
+
+.whynotworking p {
+  font-family: "Raleway";
+  font-size: 12px;
+}
+
+.filter_header_title {
+  font-weight: bold;
+  color: black;
+}
+
+.input_surface_min_range,
+.input_surface_max_range,
+.input_chambres_range,
+.input_durée_range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  background: #f2f2f2;
+  height: 10px;
+  outline: none;
+  border-radius: 2px;
+}
+
+.input_surface_min_range::-webkit-slider-thumb,
+.input_surface_max_range::-webkit-slider-thumb,
+.input_chambres_range::-webkit-slider-thumb,
+.input_durée_range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  cursor: pointer;
+  border: 2px solid #f2f2f2;
+  position: relative;
+  z-index: 3;
+}
+
+.filter_slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  border-radius: 2px;
+  width: 290px;
+}
+
+.line_min_surface,
+.line_max_surface,
+.line_chambres,
+.line_durée {
+  position: absolute;
+  height: 10px;
+  background-color: #689bff;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  border-radius: 2px;
+  margin-top: 2px;
+}
+
+.line_min_surface {
+  width: 0%;
+}
+
+.line_max_surface {
+  width: 0%;
+}
+
+.line_chambres {
+  width: 0%;
+}
+
+.line_durée {
+  width: 0%;
+}

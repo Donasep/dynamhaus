@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+	font-family: "Raleway";
+  min-height: 100vh;
+  position: relative;
+}
+
+.contactPage {
+  width: 100%;
+  height: 1100px;
+  display: flex;
+  margin: 0;
+  justify-content: center;
+}
+
+.imageArea {
+  width: 50%;
+  height: 100%;
+}
+
+.imageArea img {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.formArea {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contactForm {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contactCred {
+  display: flex;
+  gap: 30px;
+  width: 100%;
+}
+
+.inputArea {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+}
+
+.contactForm h2 {
+  color: black;
+  font-size: 15px;
+}
+
+.contactCred input {
+  height: 45px;
+  border-radius: 8px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  border: 0.5px solid black;
+  outline: none;
+	box-sizing: border-box;
+}
+
+.contactPage input {
+  height: 45px;
+	width: 100%;
+  border-radius: 8px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+  border: 0.5px solid black;
+  outline: none;
+	box-sizing: border-box;
+}
+
+.contactPage textarea {
+  height: 200px;
+	width: 100%;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 10px;
+  border: 0.5px solid black;
+  outline: none;
+	box-sizing: border-box;
+  resize: none;
+  font-family: "Raleway";
+}
+
+.contactPage button {
+  height: 45px;
+	width: 100%;
+  border-radius: 8px;
+  border: none;
+  background-color: black;
+  color: white;
+  font-weight: bold;
+  outline: none;
+	cursor: pointer;
+	margin-top: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.alert {
+  padding: 20px;
+  background-color: rgb(105, 255, 172, 0.7);
+  color: white;
+  margin-bottom: 15px;
+  top: 150px;
+  width: 30%;
+  position: absolute;
+  border-radius: 15px;
+  display: none;
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.closebtn:hover {
+  color: black;
+}
+
+@keyframes fadeInText {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  } to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

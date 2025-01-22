@@ -1,0 +1,7 @@
+ErrorDocument 404 /dynamhaus/App/Views/errors/404.php
+ErrorDocument 403 /dynamhaus/App/Views/errors/403.php
+Options -Indexes -MultiViews
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.+)$ index.php?path=$1 [QSA,L]
