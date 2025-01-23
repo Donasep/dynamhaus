@@ -11,10 +11,10 @@
   />
   <link
     rel="icon"
-    href="/dynamhaus/public/icons/dynamhause_logo.svg"
+    href="/public/icons/dynamhause_logo.svg"
     sizes="16x16"
   />
-  <link rel="stylesheet" href="/dynamhaus/public/stylesheets/navbar.css" />
+  <link rel="stylesheet" href="/public/stylesheets/navbar.css" />
 </head>
 <body>
   <nav class="navbar">
@@ -24,36 +24,36 @@
           <li class="logo">
             <img
               rel="icon"
-              src="/dynamhaus/public/icons/dynamhause_logo.svg"
-              href="/dynamhaus/"
+              src="/public/icons/dynamhause_logo.svg"
+              href="/"
             />
-            <a href="/dynamhaus/">Dynamhaus</a>
+            <a href="/">Dynamhaus</a>
           </li>
         </ul>
       </div>
       <div class="mid">
         <ul class="links">
-          <li><a href="/dynamhaus/search">Annonces</a></li>
-          <li><a href="/dynamhaus/blogs">Blogs</a></li>
+          <li><a href="/search">Annonces</a></li>
+          <li><a href="/blogs">Blogs</a></li>
         </ul>
         <div class="dropdown">
           <button class="dropbtn">Déposer une annonce</button>
           <div class="dropdown-content">
-            <a href="/dynamHaus/addAd">Vous êtes un particulier</a>
-            <a href="/dynamHaus/addAd">Vous êtes une agence immobilière</a>
-            <a href="/dynamHaus/addAd">Vous êtes une résidence étudiante</a>
+            <a href="/addAd">Vous êtes un particulier</a>
+            <a href="/addAd">Vous êtes une agence immobilière</a>
+            <a href="/addAd">Vous êtes une résidence étudiante</a>
           </div>
         </div>
       </div>
       <div class="end">
         <a 
-          href="/dynamhaus/<?php echo isset($_SESSION['token'])? 'signout' : 'signin'; ?>" 
+          href="/<?php echo isset($_SESSION['token'])? 'signout' : 'signin'; ?>" 
           class="registration_btn">
           <?php echo isset($_SESSION['token'])? 'Se déconnecter' : "S'inscrire / Se connecter"; ?>
         </a>
         <?php if (isset($_SESSION['token'])): ?>
-          <a href="/dynamhaus/profile" class="profile-icon">
-            <img src=<?= !empty($_SESSION['url'])?$_SESSION['url']:"/dynamhaus/public/images/annonce_img_5.jpg"?> alt="Profile Icon" />
+          <a href="/profile" class="profile-icon">
+            <img src=<?= !empty($_SESSION['url'])?$_SESSION['url']:"/public/images/annonce_img_5.jpg"?> alt="Profile Icon" />
           </a>
         <?php endif; ?>
       </div>

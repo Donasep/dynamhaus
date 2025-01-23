@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="" />
     <meta name="keywords" content="" />
-    <link rel="stylesheet" href="/dynamhaus/public/stylesheets/footer.css" />
+    <link rel="stylesheet" href="/public/stylesheets/footer.css" />
     <link
       rel="icon"
-      href="/dynamhaus/public/icons/dynamhause_logo.svg"
+      href="/public/icons/dynamhause_logo.svg"
       sizes="16x16"
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,7 +25,7 @@
           <div class="section_one">
             <div class="content_section_one">
               <div class="dynamhaus_name_logo">
-                <img src="/dynamhaus/public/icons/dynamhause_logo.svg" />
+                <img src="/public/icons/dynamhause_logo.svg" />
                 <h1>Dynamhaus</h1>
               </div>
               <p>
@@ -33,16 +33,16 @@
               </p>
               <div class="socials">
                 <a href=""
-                  ><img src="/dynamhaus/public/icons/instagram.svg" href=""
+                  ><img src="/public/icons/instagram.svg" href=""
                 /></a>
                 <a href=""
-                  ><img src="/dynamhaus/public/icons/facebook.svg"
+                  ><img src="/public/icons/facebook.svg"
                 /></a>
-                <a href=""><img src="/dynamhaus/public/icons/x.svg" /></a>
+                <a href=""><img src="/public/icons/x.svg" /></a>
                 <a href=""
-                  ><img src="/dynamhaus/public/icons/linkedin.svg"
+                  ><img src="/public/icons/linkedin.svg"
                 /></a>
-                <a href=""><img src="/dynamhaus/public/icons/youtube.svg" /></a>
+                <a href=""><img src="/public/icons/youtube.svg" /></a>
               </div>
             </div>
           </div>
@@ -50,22 +50,22 @@
             <h2>Entreprise</h2>
             <div class="entreprise-links">
               <li>
-                <a href="/dynamhaus/">À propos de nous</a>
+                <a href="/">À propos de nous</a>
               </li>
               <li>
-                <a href="/dynamhaus/contact/postContact">Contactez-nous</a>
+                <a href="/contact/postContact">Contactez-nous</a>
               </li>
               <li>
-                <a href="/dynamhaus/">Blog</a>
+                <a href="/">Blog</a>
               </li>
               <li>
-                <a href="/dynamhaus/faq">FAQ</a>
+                <a href="/faq">FAQ</a>
               </li>
               <li>
-                <a href="/dynamhaus/cgu">Mention légal</a>
+                <a href="/cgu">Mention légal</a>
               </li>
               <li>
-                <a href="/dynamhaus/cgu">CGU</a>
+                <a href="/cgu">CGU</a>
               </li>
             </div>
           </div>

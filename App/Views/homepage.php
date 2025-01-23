@@ -7,15 +7,15 @@
   <title>Dynmahaus</title>
   <meta name="description" content="" />
   <meta name="keywords" content="" />
-  <link rel="stylesheet" href="/dynamhaus/public/stylesheets/homepage.css" />
-  <link rel="stylesheet" href="/dynamhaus/public/stylesheets/annonces.css" />
-  <link rel="icon" href="/dynamhaus/public/icons/dynamhause_logo.svg" sizes="16x16" />
+  <link rel="stylesheet" href="/public/stylesheets/homepage.css" />
+  <link rel="stylesheet" href="/public/stylesheets/annonces.css" />
+  <link rel="icon" href="/public/icons/dynamhause_logo.svg" sizes="16x16" />
 </head>
 
 <body>
   <main>
     <section class="sectionSearch">
-      <img src="/dynamhaus/public/images/homepagedude.png" alt="Homme sortant d'un immeuble avec une plante à coté de lui">
+      <img src="/public/images/homepagedude.png" alt="Homme sortant d'un immeuble avec une plante à coté de lui">
       <h1>Trouver le bon toit, pour vivre avec joie.</h1>
       <div class="searchEngine"><?php include("search.php");?></div>
     </section>
@@ -25,21 +25,21 @@
       <div class="etapes">
         <div class="step step1">
           <div class="picto">
-            <img src="/dynamhaus/public/icons/loupe.svg" alt="pictogramme loupe">
+            <img src="/public/icons/loupe.svg" alt="pictogramme loupe">
           </div>
           <h2>Étape n°1</h2>
           <p>Trouvez le logement qui vous correspond parfaitement et confirmez votre intérêt en quelques clics.</p>
         </div>
         <div class="step step2">
           <div class="picto">
-            <img src="/dynamhaus/public/icons/check.svg" alt="pictogramme check">
+            <img src="/public/icons/check.svg" alt="pictogramme check">
           </div>
           <h2>Étape n°2</h2>
           <p>Trouvez le logement qui vous correspond parfaitement et confirmez votre intérêt en quelques clics.</p>
         </div>
         <div class="step step3">
           <div class="picto">
-            <img src="/dynamhaus/public/icons/addFriend.svg" alt="pictogramme d'ajout d'ami">
+            <img src="/public/icons/addFriend.svg" alt="pictogramme d'ajout d'ami">
           </div>
           <h2>Étape n°3</h2>
           <p>Ajoutez le bien à vos favoris ou contactez le propriétaire pour organiser une visite.</p>
@@ -53,10 +53,10 @@
         <?php 
               $offers = $data['ads']; 
               $imageSources = [
-                "/dynamhaus/public/images/annonceImg2.jpg",
-                "/dynamhaus/public/images/annonceImg3.jpeg",
-                "/dynamhaus/public/images/annonceImg4.png",
-                "/dynamhaus/public/images/annonceImg5.jpg",
+                "/public/images/annonceImg2.jpg",
+                "/public/images/annonceImg3.jpeg",
+                "/public/images/annonceImg4.png",
+                "/public/images/annonceImg5.jpg",
               ];
             ?>
             <?php $index = 0;
@@ -66,11 +66,11 @@
                   <img src="<?php echo $imageSources[$index % count($imageSources)]; ?>"  class="annonce_cover_autre" id="adImg"/>
                   <p class="addressAutreOffre" id="address"><?php echo $offer['address']; ?></p>
                   <div class="details_one">
-                    <img src="/dynamhaus/public/icons/bed.svg"/>
+                    <img src="/public/icons/bed.svg"/>
                     <p id="bedrooms"><?php echo $offer['numberOfBedrooms']; ?> chambres</p>
-                    <img src="/dynamhaus/public/icons/bath.svg"/>
+                    <img src="/public/icons/bath.svg"/>
                     <p id="bathrooms"><?php echo $offer['numberOfBathrooms']; ?> salle de bains</p>
-                    <img src="/dynamhaus/public/icons/size.svg"/>
+                    <img src="/public/icons/size.svg"/>
                     <p id="size"><?php echo $offer['surface']; ?>m2</p>
                   </div>
                   <div class="details_two">
@@ -99,7 +99,7 @@
       </div>
     </section>
   </main>
-  <script src="/dynamhaus/public/script/searchSubmit.js"></script>
+  <script src="/public/script/searchSubmit.js"></script>
 </body>
 
 </html>
