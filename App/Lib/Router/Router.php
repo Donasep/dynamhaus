@@ -11,8 +11,29 @@ class Router {
     public function __construct() {
         $this->routes = ROUTES;
         $this->availablePaths=array_keys($this->routes);
-        $this->requestedPath=isset($_GET["path"]) ? $_GET['path'] : "/";
+        $requestUri = $_SERVER['REQUEST_URI'];
+
+        // Supprimer la query string de l'URI si elle existe
+        if (false !== $pos = strpos($requestUri, '?')) {
+            $requestUri = substr($requestUri, 0, $pos);
+        }
+
+        // Supprimer les slashes de début et de fin pour la normalisation
+        $this->requestedPath = trim($requestUri, '/'); 
+        // Si la racine est demandée, $this->requestedPath sera une chaîne vide.
+        // On le normalise en "/" pour correspondre à votre route "/"
+        if ($this->requestedPath === '') {
+            $this->requestedPath = '/';
+        } else {
+            // S'assurer qu'il y a un slash au début pour la cohérence avec vos définitions de routes
+            $this->requestedPath = '/' . $this->requestedPath;
+        }
+        // --- Fin de la modification ---
+        
+        // error_log("Router - Requested Path: " . $this->requestedPath); // Pour débogage
+
         $this->parseRoutes();
+    
     }
 
     private function parseRoutes() {
