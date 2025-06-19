@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.dashboards {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+.dashboard {
+    width: 30%;
+    background: rgb(240, 240, 240);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+.dashboard h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color:rgb(154, 210, 194)
+}
+
+.temperature-value {
+    font-size: 3rem;
+    color: rgb(76, 165, 119);
+    font-weight: bold;
+}
+
+.dashboard p {
+    font-size: 1.1rem;
+    color: rgb(100, 100, 100);
+    line-height: 1;
+}
+
+
+/* menu lateral */
+
+
+.menu-lateral {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 220px;
+  height: 100%;
+  background-color: #ffffff;
+  border-right: 1px solid #e0e0e0;
+  padding-top: 40px;
+}
+
+.menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  margin-bottom: 10px;
+}
+
+.menu a {
+  display: block;
+  padding: 12px 20px;
+  color: #333;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+/* Contenu principal décalé à droite */
+.main-content {
+  margin-left: 220px;
+  padding: 30px;
+  flex: 1;
+}
+
+
+/* Responsive - petit écran */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .menu-lateral {
+    position: absolute;
+    left: 0;
+    width: 220px;
+    height: auto;
+    background-color: #fff;
+    transform: translateX(-100%);
+    z-index: 999;
+  }
+
+  .menu-lateral.open {
+    transform: translateX(0);
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}

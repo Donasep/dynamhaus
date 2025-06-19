@@ -1,0 +1,65 @@
+html, body {
+    height: 100%; /* Important pour que min-height sur body fonctionne bien */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column; /* Empile header, site-body, footer verticalement */
+    min-height: 100vh; /* Assure que le body prend au moins toute la hauteur de la fenêtre */
+    font-family: 'Inter', sans-serif; /* Ou votre police globale */
+    background-color: var(--secondary-color, #F8F9FA); /* Fond global */
+    color: var(--text-color, #343A40);
+}
+
+.main-header { /* Votre header existant */
+    flex-shrink: 0; /* Empêche le header de rétrécir si le contenu est trop grand */
+    position: sticky; /* Recommandé pour le header, reste en haut au défilement */
+    top: 0;
+    z-index: 1000; /* Assure qu'il est au-dessus du reste */
+    /* Vos autres styles de header : background, padding, etc. */
+}
+
+.site-body {
+    display: flex; /* Active Flexbox pour ses enfants (menu latéral et contenu principal) */
+    flex-grow: 1;  /* Permet à cette zone de s'étendre verticalement pour occuper l'espace disponible */
+    /* Si le header n'est PAS sticky et est dans le flux normal,
+       et que le menu latéral est 'fixed', des ajustements sont nécessaires.
+       Avec header sticky, c'est plus simple. */
+}
+
+/* Styles pour le menu latéral (quand il est présent) */
+.menu-lateral {
+    width: 220px;
+    flex-shrink: 0; /* Empêche le menu de rétrécir */
+    background-color: #ffffff;
+    border-right: 1px solid #e0e0e0;
+    padding-top: 20px; /* Espace interne en haut du menu */
+    box-sizing: border-box;
+    overflow-y: auto; /* Permet le défilement si le menu est long */
+    height: 100%; /* S'adaptera à la hauteur du parent .site-body */
+
+    /* Si vous voulez qu'il soit 'fixed' par rapport au viewport sous un header sticky: */
+    /* position: sticky; */
+    /* top: HAUTEUR_HEADER; (hauteur de .main-header) */
+    /* S'il est sticky, il défilera avec le contenu mais restera visible dans sa colonne */
+    /* Pour un vrai 'fixed' comme avant, il faut des ajustements plus fins (voir note en bas) */
+}
+
+/* Styles pour le conteneur du contenu principal de la page (ex: .main-content dans temperature.php) */
+/* Ce sera un enfant direct de .site-body, à côté de .menu-lateral (s'il existe) */
+.page-main-content-area { /* Une classe générique pour le conteneur de contenu principal de chaque page */
+    flex-grow: 1; /* Prend tout l'espace restant à droite du menu (ou toute la largeur s'il n'y a pas de menu) */
+    padding: 20px;
+    overflow-y: auto; /* Permet au contenu de défiler indépendamment du menu */
+    box-sizing: border-box;
+}
+
+.main-footer { /* Votre footer existant */
+    flex-shrink: 0; /* Empêche le footer de rétrécir */
+    /* Le footer prendra automatiquement toute la largeur car il est un enfant direct du body (flex-direction: column) */
+    width: 100%;
+    box-sizing: border-box;
+    /* Vos autres styles de footer : background, padding, text-align, etc. */
+}

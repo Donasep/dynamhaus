@@ -1,0 +1,177 @@
+/* --- public/stylesheets/login.css --- */
+:root {
+    --primary-color: #005A9C;
+    --secondary-color: #F8F9FA;
+    --text-color: #343A40;
+    --border-color: #DEE2E6;
+    --error-color: #dc3545;
+}
+
+/* Anciennement .form-container */
+.login-page-container { /* C'est le conteneur principal centré par .layout-main-content */
+    width: 100%;
+    max-width: 450px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    /* Les propriétés de centrage flex sont gérées par .layout-main-content */
+}
+
+/* Anciennement .form-box */
+.login-form-panel {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    text-align: center;
+}
+
+/* Nouveau nom pour le lien du logo dans le panel de connexion */
+.login-panel-logo-link {
+    display: inline-block;
+    margin-bottom: 25px;
+    text-decoration: none;
+}
+
+/* Nouveau nom pour le logo dans le panel de connexion */
+.login-panel-logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.login-form-panel h2 { /* Cibler le h2 à l'intérieur du panel spécifique */
+    font-size: 1.8rem;
+    color: var(--text-color);
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+/* Anciennement .form-group */
+.login-form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.login-form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #555;
+    font-size: 0.95rem;
+}
+
+.login-form-group input[type="email"],
+.login-form-group input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.login-form-group input[type="email"]:focus,
+.login-form-group input[type="password"]:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 90, 156, 0.2);
+}
+
+/* Anciennement .password-wrapper */
+.login-password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.login-password-wrapper input[type="password"],
+.login-password-wrapper input[type="text"] {
+    padding-right: 45px;
+}
+
+/* Anciennement .password-toggle-btn */
+.login-password-toggle-btn {
+    position: absolute;
+    right: 1px; 
+    top: 1px;
+    bottom: 1px;
+    width: 40px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #777;
+    border-left: 1px solid var(--border-color);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.login-password-toggle-btn:hover {
+    color: var(--primary-color);
+}
+.login-password-toggle-btn i {
+    font-size: 1.1rem;
+}
+
+/* La classe .btn .btn-primary vient de header.css et peut être surchargée si besoin */
+.login-form-panel .btn.btn-primary { 
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+/* Anciennement .form-footer */
+.login-form-footer {
+    margin-top: 25px;
+    font-size: 0.9rem;
+}
+
+.login-form-footer p {
+    margin-bottom: 10px;
+}
+
+.login-form-footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.login-form-footer a:hover {
+    text-decoration: underline;
+}
+
+/* Anciennement .error-text */
+.login-error-text {
+    color: var(--error-color);
+    font-size: 0.9rem;
+    margin-top: 5px;
+    text-align: left;
+}
+
+/* Le conteneur de message d'erreur (ID, donc déjà unique par page) */
+#errorMessageContainer { /* Peut rester un ID car unique à la page de login */
+    background-color: rgba(220, 53, 69, 0.1);
+    border: 1px solid rgba(220, 53, 69, 0.3);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+#errorMessageContainer .login-error-text { /* S'assurer qu'il cible bien la nouvelle classe si .error-text y est utilisé */
+    margin: 0;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .login-form-panel {
+        padding: 25px 20px;
+    }
+    .login-form-panel h2 {
+        font-size: 1.6rem;
+    }
+}

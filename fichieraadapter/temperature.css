@@ -1,0 +1,35 @@
+:root {
+  --success: #00b894;
+  --progress: #e17055;
+}
+
+.tempbar-wrapper {
+  background-color: #dfe6e9;
+  color: white;
+  border-radius: 15px;
+  width: 0.5em;                     /* fixe la largeur */
+  height: 3em;                    /* fixe la hauteur */
+}
+
+.tempbar {
+    position: absolute;
+    width: 1em;                     /* 100% de la largeur */
+    height: 1em;                    /* 100% de la hauteur */
+    left: -.15em;                   /* décalage de la largeur bordure de la gauge */
+    top: -.15em;                    /* décalage de la largeur bordure de la gauge */
+    clip: rect(0, 1em, 1em, .5em);  /* par défaut seule la partie droite est visible */
+    .tempbar-wrapper[data-value^='5']:not([data-value='5']):not([data-value^='5.']) .tempbar,
+    .tempbar-wrapper[data-value^='6']:not([data-value='6']):not([data-value^='6.']) .tempbar,
+    .tempbar-wrapper[data-value^='7']:not([data-value='7']):not([data-value^='7.']) .tempbar,
+    .tempbar-wrapper[data-value^='8']:not([data-value='8']):not([data-value^='8.']) .tempbar,
+    .tempbar-wrapper[data-value^='9']:not([data-value='9']):not([data-value^='9.']) .tempbar,
+    .tempbar-wrapper[data-value^='100'] .tempbar {
+    clip: rect(auto, auto, auto, auto);
+}
+}
+
+
+
+.progressbar[title="Temperature"] {
+   background-color: var(--success);
+}
